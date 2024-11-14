@@ -26,14 +26,4 @@ spec:
             port: 30200
           initialDelaySeconds: 5
           periodSeconds: 5
-      - name: redis
-        image: redis:alpine
-        ports:
-        - containerPort: 6379
-        volumeMounts:
-        - mountPath: /data/redis
-          name: redis-storage
-      volumes:
-      - name: redis-storage
-        persistentVolumeClaim:
-          claimName: redis-pvc
+     
